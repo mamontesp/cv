@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage[scale=0.915]{geometry}
+\usepackage{import}
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\name{Andrea}{Montes}
+\newcommand*{\customcventry}[7][.13em]{
+\begin{tabular}{@{}l}
+{\bfseries #4} \
+{\itshape #3}
+\end{tabular}
+\hfill
+\begin{tabular}{l@{}}
+{\bfseries #5} \
+{\itshape #2}
+\end{tabular}
+\ifx&#7&%
+\else{\
+\begin{minipage}{\maincolumnwidth}%
+\small#7%
+\end{minipage}}\fi%
+\par\addvspace{#1}}
+\begin{document}
+\makecvtitle
+\vspace*{-16mm}
+\begin{center}\textbf{ Senior Data Engineer }\end{center}
+\vspace*{-8mm}
+\begin{center}mamontesp@gmail.com\end{center}
+\begin{center}
+\begin{tabular}{ c c c }
+\faLinkedin\enspace \href{https://www.linkedin.com/in/andrea-montes-5a9a25b1/}{in/andrea-montes  } &
+\faGithub\enspace \href{https://github.com/mamontesp}{github.com/mamontesp} & \enspace {$\mathbb{G}$}\enspace \href{https://mamontesp.ghost.io}{mamontesp.ghost.io}
+\end{tabular}
+\end{center}
+    
+\section{Professional Experience}
+\customcventry{05/2023 ‐ Present}{{Terminal Labs}}{Senior Data Engineer I, }{Remote}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Migration from legacy product to a lakehouse with a modern data stack. DBT + Dagster +
+Terraform + AWS + Iceberg tables + Python + Looker. Transition from updates every 8 days to daily updates. 
+\item Enforced fail fast mindset to the team, focused on having a good test environment, deployments to production got from 2 weeks cycle
+to twice a day.
+\item Added observability features to improve debug time from 2 days to 15 mins. Green/blue deployments across +250 clients.
+\item Worked on a SQL Glot tool to port Postgres SQL to ANSI SQL, ported +500 client reports in 3 days. Added data audits to ensure consistency after migration.
+\end{itemize}}}
+
+\customcventry{04/2022 ‐ 05/2023}{{Terminal Labs}}{Data Engineer II, }{Remote}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Classification algorithm to standardize events categories, workflow status and sentiment evaluation across +250 clients. Deployment with AWS Batch and CI/CD pipeline. Save +40 hour per week in manual classification. 98\% accuracy.
+\item Migration from raw SQL to DBT models. Improved data updates from 4-6 to $\approx$ 1 day. Added data audits. DMS + Step functions + Lambda functions for multi-tenant applications. 
+\item Python + DBT + data modeling + Airflow + Buildkite + Looker. Improved data quality to 95\%.
+\end{itemize}}}
+
+\customcventry{09/2021 ‐ 04/2022}{{Globant}}{Data Engineer I,}{Bogotá, Colombia}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Supported DWH star schema environment, orchestration process with Step + Lambda functions in AWS. Added automation of deployment process. Unit/component/integration/E2E testing.
+\item Added Gitlab CI/CD pipeline, reducing production errors by 30\%.
+\end{itemize}}}
+
+\customcventry{09/2019 ‐ 09/2021}{{Globant}}{QA Senior Automation Engineer, }{Bogotá, Colombia}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Automated tests for web platforms and mobile environments with Robot Framework, scripting. Test coverage increased by 60\%.
+\item Design of tests cases. Jenkins continuous integration. Scrum methodology.
+\end{itemize}}}
+
+\section{Education}
+\customcventry{2012-2017}{Universidad Nacional de Colombia}{BSc Electronics Engineer}{Bogotá, Colombia}{}{}
+{Relevant Courses: Software and Hardware, Digital Signal Processing, Control Systems, Microcontrollers, Power Electronics, Telecommunications, Data Structures, Algorithms, Programming, Mathematics}
+
+\customcventry{2017}{Purdue University}{Visitor Scholar}{Indiana, USA}{}{}
+{Research project on synthesis of nanostructured materials and design, development and delivery of acquisition system for electromigration phenomena. Scholarship program UREP-C between Universidad Nacional de Colombia and Purdue University.}
+
+\section{Skills}
+{\begin{itemize}[label=\textbullet]
+\setlength\itemsep{-0.1cm}
+\item {\textbf{Orchestration:} Airflow, Dagster, AWS Step Functions}
+\item {\textbf{ETL:} dbt, Iceberg tables, Postgres, Trino (Starburst), Snowflake, Airbyte, AWS stack: DMS, Glue Jobs, Lambda Functions, EC2, Batch, RDS}
+\item {\textbf{Deployment}: Docker, Kubernetes, CI/CD}
+\item {\textbf{Data Visualization:} Looker, Superset}
+\item {\textbf{Soft Skills:} Planning, Organized, Creative Problem-Solving, Teamwork, Active Listening, Adaptability, Analytical Thinking}
+\end{itemize}}
+
+\section{Languages}
+\begin{multicols}{2}
+    \begin{itemize}[leftmargin=0.6cm, label=\textbullet]
+    \setlength\itemsep{0.3cm}
+    \item \textbf{English} [Fluent]
+    \item {\textbf{Spanish} [Native]}
+    \end{itemize}
+\end{multicols}
+\end{document}
