@@ -1,9 +1,8 @@
-[]: # Title: README
-[]: # Date: 2024-05-01
-[]: # Tags: #readme #data-engineer
-# README
+![GitHub last commit](https://img.shields.io/github/last-commit/mamontesp/cv)
+![GitHub top language](https://img.shields.io/github/languages/top/mamontesp/cv)
+# Andrea Montes' CV
 
-This is the CV of Andrea Montes, a Senior Data Engineer.
+This is the CV of Andrea Montes, a Senior Data Engineer. I like sharing my knowledge and experience with others, so I decided to share my CV as a template for others to use.
 
 ## Can I use this repository as a template?
 
