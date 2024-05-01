@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name 'mamontesp'
           git config --global user.email 'mamontesp@gmail.com'
-          git add docs/cv_english_andreamontes.pdf
+          git add -f docs/cv_english_andreamontes.pdf
           git commit -m "Update PDF"
           git push origin gh-pages  # Push changes to the same branch GitHub Pages is set to build from
