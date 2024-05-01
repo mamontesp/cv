@@ -1,0 +1,17 @@
+name: GitHub Pages Deploy
+
+on:
+  push:
+    branches:
+      - gh-pages
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build and Deploy
+        run: echo "Add steps relevant to your GitHub Pages build here"
