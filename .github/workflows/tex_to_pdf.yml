@@ -16,7 +16,7 @@ jobs:
         run: sudo apt-get install -y texlive-full
 
       - name: Compile LaTeX document
-        run: pdflatex cv_english_andreamontes.tex | mv cv_english_andreamontes.pdf docs/cv_english_andreamontes.pdf
+        run: pdflatex -output-directory docs cv_english_andreamontes.tex
 
       - name: Upload PDF to GitHub Artifacts
         uses: actions/upload-artifact@v3
