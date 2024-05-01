@@ -34,4 +34,4 @@ jobs:
           git checkout gh-pages  # Switch to the branch GitHub Pages is set to build from
           git add -f docs/cv_english_andreamontes.pdf
           git commit -m "Update PDF"
-          git push  # Push changes to the same branch GitHub Pages is set to build from
+          git push origin gh-pages # Push changes to the same branch GitHub Pages is set to build from
