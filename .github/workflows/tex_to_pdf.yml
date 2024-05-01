@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for all branches and tags
 
       - name: Install LaTeX
         run: sudo apt-get install -y texlive-full
@@ -28,6 +30,7 @@ jobs:
         run: |
           git config --global user.name 'mamontesp'
           git config --global user.email 'mamontesp@gmail.com'
+          git fetch --all
           git checkout gh-pages  # Switch to the branch GitHub Pages is set to build from
           git add -f docs/cv_english_andreamontes.pdf
           git commit -m "Update PDF"
