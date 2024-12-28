@@ -5,6 +5,17 @@ on:
     branches:
       - master
 
+# Sets permissions of the GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,18 +32,14 @@ jobs:
       - name: Compile LaTeX document
         run: pdflatex -output-directory docs cv_english_andreamontes.tex
 
-      - name: Upload PDF to GitHub Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: cv_english_andreamontes
-          path: docs/cv_english_andreamontes.pdf
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: Commit PDF
-        run: |
-          git config --global user.name 'mamontesp'
-          git config --global user.email 'mamontesp@gmail.com'
-          git fetch --all
-          git checkout gh-pages  # Switch to the branch GitHub Pages is set to build from
-          git add docs/cv_english_andreamontes.pdf
-          git commit -m "Update PDF"
-          git push --set-upstream https://mamontesp@github.com/mamontesp/cv.git gh-pages # Push changes to the same branch GitHub Pages is set to build from
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
