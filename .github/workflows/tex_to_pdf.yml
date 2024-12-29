@@ -29,9 +29,11 @@ jobs:
 
       - name: Install LaTeX
         run: sudo apt-get install -y texlive-full
+        if: ${{ contains(github.event.head_commit.modified, 'cv_english_andreamontes.tex') }}
 
       - name: Compile LaTeX document
         run: pdflatex -output-directory docs cv_english_andreamontes.tex
+        if: ${{ contains(github.event.head_commit.modified, 'cv_english_andreamontes.tex') }}
 
       - name: Setup Pages
         id: pages
