@@ -14,7 +14,8 @@ Download my [CV]({{ site.baseurl }}/assets/cv/cv_english_andreamontes.pdf) in PD
 **Senior Data Engineer**  
 mamontesp@gmail.com  
 
-[LinkedIn: in/mamontesp](https://www.linkedin.com/in/mamontesp) | [GitHub: github.com/mamontesp](https://github.com/mamontesp) | [Blog: mamontesp.ghost.io](https://mamontesp.ghost.io)  
+
+[![LinkedIn profile Andrea Montes'](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/andrea-montes-5a9a25b1/) | [![Github profile](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mamontesp)|[![Ghost profile](https://img.shields.io/badge/Ghost-000?style=for-the-badge&logo=ghost&logoColor=yellow)](https://mamontesp.ghost.io)
 
 ---
 
