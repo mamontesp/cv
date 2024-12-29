@@ -1,0 +1,42 @@
+source: docs
+remote_theme: pages-themes/cayman@v0.2.0
+theme: minima
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+collections:
+  authors:
+    output: true
+    
+title: [Andrea Montes CV]
+description: [This is a professional view of my person. Data Engineer among other things]
+show_downloads: [true]
+repository: mamontesp/cv
+domain: mamontesp.github.io
+url: https://mamontesp.github.io
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+cv:
+  download_pdf: https://mamontesp.github.io/cv/cv_english_andreamontes.pdf
+  is_project_page: [true]
+  repository_url: https://github.com/mamontesp/cv
+  owner_url: https://github.com/mamontesp
+  repository_name: CV
+  owner_name: Andrea Montes
