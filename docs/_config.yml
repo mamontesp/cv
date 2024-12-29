@@ -10,7 +10,7 @@ collections:
   authors:
     output: true
     
-title: [Andrea Montes CV]
+title: [Andrea Montes]
 description: [This is a professional view of my person. Data Engineer among other things]
 show_downloads: [true]
 repository: mamontesp/cv
