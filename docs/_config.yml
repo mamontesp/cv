@@ -34,7 +34,7 @@ defaults:
       layout: "default"
 
 cv:
-  download_pdf: https://mamontesp.github.io/cv/cv_english_andreamontes.pdf
+  download_pdf: https://mamontesp.github.io/cv/assets/cv/cv_english_andreamontes.pdf
   is_project_page: [true]
   repository_url: https://github.com/mamontesp/cv
   owner_url: https://github.com/mamontesp
