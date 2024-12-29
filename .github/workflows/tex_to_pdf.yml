@@ -27,16 +27,23 @@ jobs:
           fetch-depth: 0  # Fetch all history for all branches and tags
           persist-credentials: false
 
+      - name: Calculate cache key
+        id: cache-key
+        run: echo "CACHE_KEY=$(sha256sum cv_english_andreamontes.tex | cut -d' ' -f1)" >> $GITHUB_ENV
+
+      - name: Restore PDF from cache
+        uses: actions/cache@v3
+        with:
+          path: docs/assets/cv/cv_english_andreamontes.pdf
+          key: ${{ env.CACHE_KEY }}
+
       - name: Install LaTeX
-        if: contains(github.event.head_commit.message, '.tex') || contains(join(github.event.commits.*.modified), '.tex')
+        if: steps.cache.outputs.cache-hit != 'true'
         run: sudo apt-get install -y texlive-full
-        
-        
 
       - name: Compile LaTeX document
-        if: contains(github.event.head_commit.message, '.tex') || contains(join(github.event.commits.*.modified), '.tex')
+        if: steps.cache.outputs.cache-hit != 'true'
         run: pdflatex -output-directory docs/assets/cv cv_english_andreamontes.tex
-        
 
       - name: Setup Pages
         id: pages
