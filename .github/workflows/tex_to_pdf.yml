@@ -35,7 +35,7 @@ jobs:
 
       - name: Compile LaTeX document
         if: contains(github.event.head_commit.message, '.tex') || contains(join(github.event.commits.*.modified), '.tex')
-        run: pdflatex -output-directory _site cv_english_andreamontes.tex
+        run: pdflatex -output-directory docs/assets/cv cv_english_andreamontes.tex
         
 
       - name: Setup Pages
