@@ -32,6 +32,7 @@ jobs:
         run: echo "CACHE_KEY=$(sha256sum cv_english_andreamontes.tex | cut -d' ' -f1)" >> $GITHUB_ENV
 
       - name: Restore PDF from cache
+        id: cache 
         uses: actions/cache@v3
         with:
           path: docs/assets/cv/cv_english_andreamontes.pdf
@@ -40,7 +41,7 @@ jobs:
       - name: Check cache hit status
         run: |
           echo "Cache hit: ${{ steps.cache.outputs.cache-hit }}"
-          ls -la assets/cv/
+          ls -la docs/assets/cv/
 
       - name: Install LaTeX
         if: steps.cache.outputs.cache-hit != 'true'
