@@ -37,6 +37,11 @@ jobs:
           path: docs/assets/cv/cv_english_andreamontes.pdf
           key: ${{ env.CACHE_KEY }}
 
+      - name: Check cache hit status
+        run: |
+          echo "Cache hit: ${{ steps.cache.outputs.cache-hit }}"
+          ls -la assets/cv/
+
       - name: Install LaTeX
         if: steps.cache.outputs.cache-hit != 'true'
         run: sudo apt-get install -y texlive-full
