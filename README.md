@@ -11,7 +11,7 @@ Yes, you can use this repository as a template. Fork this repository and add a s
 
 ## How can I contact Andrea Montes?
 
-You can contact Andrea Montes by sending an email to mamontesp@gmail.com, or in mastodon as @mamontesp
+You can contact Andrea Montes by sending an email to mamontesp@gmail.com, or leaving a request here.
 
 ## Usage
 
